@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Header from "./components/Header.js";
 import CollectionCard from "./components/CollectionCard.js";
+import PunkList from "./components/PunkList.js";
 
 import "./App.css";
 
@@ -18,18 +19,13 @@ function App() {
       const openseaData = await axios.get(url);
       setPunkListData(openseaData.data.assets);
     };
-    getMyNft();
+    return getMyNft();
   }, []);
 
   return (
     <div className="app">
       <Header />
-      <CollectionCard
-        id={1}
-        name={"CP Punk 1"}
-        traits={[{ value: 7 }]}
-        image="https://ipfs.thirdweb.com/ipfs/QmX5KmDnfBdHQhmCSnqsb4yp3dyHcY6dzd2f7L9NEgATtQ/0.jpg"
-      />
+      <PunkList punkListData={punkListData} />
     </div>
   );
 }
