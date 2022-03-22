@@ -10,6 +10,7 @@ import "./App.css";
 
 function App() {
   const [punkListData, setPunkListData] = useState([]);
+  const [selectedPunk, setSelectedPunk] = useState(0);
 
   useEffect(() => {
     const wallet = "0xE547ac1Ba178351fa7428EBFc9763A448666B15e";
@@ -19,14 +20,18 @@ function App() {
       const openseaData = await axios.get(url);
       setPunkListData(openseaData.data.assets);
     };
-    return getMyNft();
+    getMyNft();
   }, []);
 
   return (
     <div className="app">
       <Header />
-      <Main />
-      <PunkList punkListData={punkListData} />
+      {punkListData.length > 0 && (
+        <>
+          <Main punkListData={punkListData} selectedPunk={selectedPunk} />
+          <PunkList punkListData={punkListData} setSelectedPunk={setSelectedPunk} />
+        </>
+      )}
     </div>
   );
 }

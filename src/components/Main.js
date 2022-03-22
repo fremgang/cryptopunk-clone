@@ -1,11 +1,21 @@
-import "./Main.css";
+import { useState, useEffect } from "react";
 
 import InstagramLogo from "../assets/owner/instagram.png";
 import TwitterLogo from "../assets/owner/twitter.png";
 import MoreIcon from "../assets/owner/more.png";
 
+import "./Main.css";
 
-const Main = () => {
+
+const Main = ({ selectedPunk, punkListData }) => {
+  const [activePunk, setActivePunk] = useState(punkListData[0]);
+
+  useEffect(() => {
+    setActivePunk(punkListData[selectedPunk]);
+  }, [punkListData, selectedPunk]);
+
+  console.log(punkListData);
+
   return (
     <div className="main">
       <div className="mainContent">
@@ -13,14 +23,14 @@ const Main = () => {
           <div className="punkContainer">
             <img
               className="selectedPunk"
-              src="https://ipfs.thirdweb.com/ipfs/QmX5KmDnfBdHQhmCSnqsb4yp3dyHcY6dzd2f7L9NEgATtQ/0.jpg"
+              src={activePunk.image_url}
               alt="Active punk"
             />
           </div>
         </div>
         <div className="punkDetails" style={{ color: "#fff" }}>
-          <div className="title">CP Punk 1</div>
-          <span className="itemNumber">#1</span>
+          <div className="title">{activePunk.name}</div>
+          <span className="itemNumber">#{activePunk.token_id}</span>
         </div>
         <div className="owner">
           <div className="ownerImage">
@@ -31,7 +41,7 @@ const Main = () => {
           </div>
           <div className="ownerDetails">
             <div className="ownerNameAndHandle">
-              <div>0xE547ac1Ba178351fa7428EBFc9763A448666B15e</div>
+              <div>{activePunk.owner.address}</div>
               <div className="ownerHandle">@pakavi</div>
             </div>
             <div className="ownerLink">

@@ -1,6 +1,6 @@
 .main {
   max-height: 50vh;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .mainContent {
@@ -39,13 +39,13 @@
 
 
 .title {
-  font-size: 96px;
+  font-size: 60px;
   font-weight: 800;
 }
 
 .itemNumber {
   color: #a1a5b0;
-  font-size: 72px;
+  font-size: 40px;
 }
 
 
@@ -80,6 +80,8 @@
 
 .ownerNameAndHandle {
   flex: 1;
+  margin-right: 20px;
+  color: #fff;
 }
 
 .ownerHandle {
