@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 import Header from "./components/Header.js";
-import CollectionCard from "./components/CollectionCard.js";
 import PunkList from "./components/PunkList.js";
+import Main from "./components/Main.js";
 
 import "./App.css";
 
@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="app">
       <Header />
+      <Main />
       <PunkList punkListData={punkListData} />
     </div>
   );
