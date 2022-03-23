@@ -6,7 +6,7 @@ import weth from "../assets/weth.png";
 const CollectionCard = ({ id, name, traits, image }) => {
   return (
     <div className="collectionCard">
-      <img src={image} alt="" />
+      <img src={image} alt="NFT Image" />
       <div className="details">
         <div className="name">
           {name}
