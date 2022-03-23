@@ -13,4 +13,4 @@ Cryptopunk clone incl. reactjs and web 3.0 w/ metamask integration
 
 ## Screenshots
 
-![App Screenshot](https://i.postimg.cc/5NNykSrD/2022-03-22-18-42-32.png)
+![App Screenshot](https://i.postimg.cc/hG8Xdgp1/2022-03-23-08-05-55-new.png)
