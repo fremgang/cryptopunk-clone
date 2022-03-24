@@ -1,14 +1,14 @@
 
 # Cryptopunk Clone
 
-Cryptopunk clone w/ reactjs and web 3.0 incl. metamask integration
+Cryptopunk clone w/ reactjs and web3 incl. metamask integration
 
 **Credits:** Clever Programmer
 
 
 ## Tech Stack
 
-**Client:** React, Web 3.0
+**Client:** React, Web3
 
 **Server:** Node
 
