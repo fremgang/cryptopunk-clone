@@ -3,6 +3,8 @@
 
 Cryptopunk clone w/ reactjs and web 3.0 incl. metamask integration
 
+**Credits:** Clever Programmer
+
 
 ## Tech Stack
 
